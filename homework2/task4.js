@@ -33,7 +33,10 @@ function checkNumberValues(num) {
   }
 
   function areHalvesEqual() {
-    return digits[0] + digits[1] == digits[2] + digits[3];
+    return (
+      Number(digits[0]) + Number(digits[1]) ==
+      Number(digits[2]) + Number(digits[3])
+    );
   }
 
   let obj = {
@@ -45,4 +48,4 @@ function checkNumberValues(num) {
   return obj;
 }
 
-checkNumberValues(5154);
+checkNumberValues(5124);
