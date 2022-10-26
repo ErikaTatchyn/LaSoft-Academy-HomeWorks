@@ -34,7 +34,7 @@ function checkNumberValues(num) {
 
   function areHalvesEqual() {
     return (
-      Number(digits[0]) + Number(digits[1]) ==
+      Number(digits[0]) + Number(digits[1]) ===
       Number(digits[2]) + Number(digits[3])
     );
   }
