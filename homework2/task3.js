@@ -3,7 +3,7 @@
 // checkLastNumber(26, 148) //false
 
 function checkLastNumber(num1, num2) {
-  return num1 % 10 == num2 % 10;
+  return num1 % 10 === num2 % 10;
 }
 
 checkLastNumber(26, 148);

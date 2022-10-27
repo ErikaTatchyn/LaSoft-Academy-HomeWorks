@@ -13,14 +13,14 @@
 // }
 
 function checkNumberValues(num) {
-  let digits = num.toString().split("");
+  const digits = num.toString().split("");
 
-  let sum = digits.map(Number).reduce(function (a, b) {
+  const sum = digits.map(Number).reduce(function (a, b) {
     return a + b;
   }, 0);
 
   function hasSameDigit() {
-    let arr = [];
+    const arr = [];
     let result = false;
     for (item of digits) {
       if (arr.includes(item)) {
@@ -39,7 +39,7 @@ function checkNumberValues(num) {
     );
   }
 
-  let obj = {
+  const obj = {
     sum: sum,
     hasSameDigit: hasSameDigit(),
     areHalvesEqual: areHalvesEqual(),
