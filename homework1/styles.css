@@ -26,7 +26,7 @@ p {
 
 img {
   display: inline-block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -36,7 +36,7 @@ img {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  gap: 170px;
+  /* gap: 170px; */
 }
 
 .link {
@@ -57,10 +57,6 @@ img {
 .sidebar {
   display: inline-block;
 }
-
-/* .sidebar.hidden {
-  display: block;
-} */
 
 .side-block {
   margin: 50px 0;
@@ -166,6 +162,15 @@ img {
 
 .img-container {
   width: 50%;
+  height: auto;
+}
+
+.paris-img {
+  padding-left: 50px;
+}
+
+.letter-img {
+  padding-right: 50px;
 }
 
 .reverse-container {
@@ -194,11 +199,6 @@ img {
   border: transparent;
   border-radius: 10px;
   padding: 10px 38px;
-}
-
-.button:hover,
-.button:focus {
-  background-color: var(--active-color);
 }
 
 .visually-hidden {
@@ -270,6 +270,11 @@ img {
 
   .button {
     width: 100%;
+  }
+
+  .button:hover,
+  .button:focus {
+    background-color: var(--active-color);
   }
 
   .sidebar {
