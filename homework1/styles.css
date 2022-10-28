@@ -36,7 +36,6 @@ img {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  /* gap: 170px; */
 }
 
 .link {
@@ -68,10 +67,6 @@ img {
   padding-top: 25px;
   padding-bottom: 25px;
   align-items: center;
-}
-
-.logo-link {
-  width: 78px;
 }
 
 .site-nav {
@@ -167,6 +162,8 @@ img {
 
 .paris-img {
   padding-left: 50px;
+  height: 100%;
+  object-fit: cover;
 }
 
 .letter-img {
@@ -266,6 +263,11 @@ img {
   .img-container,
   .subscribe-container {
     width: 100%;
+  }
+
+  .paris-img,
+  .letter-img {
+    padding: 0;
   }
 
   .button {
