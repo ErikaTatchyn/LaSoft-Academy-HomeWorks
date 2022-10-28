@@ -7,8 +7,8 @@
 // [1, 3, 4, 5, 7]
 
 function stringToArr(str) {
-  let arrOfStr = [];
-  let arrOfNum = [];
+  const arrOfStr = [];
+  const arrOfNum = [];
   const splittedStr = str.split(",");
   for (item of splittedStr) {
     if (!isNaN(item)) {
