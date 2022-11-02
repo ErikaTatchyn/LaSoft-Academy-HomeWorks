@@ -1,6 +1,5 @@
 function specialReverse(string, letter) {
   const arr = string.split(" ");
-  console.log(arr);
   const mapedArr = arr.map((element) => {
     if (element.charAt(0) === letter) {
       return element.split("").reverse().join("");

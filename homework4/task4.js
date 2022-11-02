@@ -48,13 +48,13 @@ function getNameScore(name) {
   }
 
   if (score <= 60) {
-    console.log(`Your score ${score}, which is NOT TOO GOOD`);
+    return `Your score ${score}, which is NOT TOO GOOD`;
   } else if (score <= 300 && score >= 61) {
-    console.log(`Your score ${score}, which is PRETTY GOOD`);
+    return `Your score ${score}, which is PRETTY GOOD`;
   } else if (score <= 599 && score >= 301) {
-    console.log(`Your score ${score}, which is VERY GOOD`);
+    return `Your score ${score}, which is VERY GOOD`;
   } else {
-    console.log(`Your score ${score}, which is THE BEST`);
+    return `Your score ${score}, which is THE BEST`;
   }
 }
 
