@@ -88,8 +88,7 @@ class PersonClass {
 
   getAge() {
     if (!this.validate([this.data.birthDate])) {
-      console.log("Error");
-      return;
+      return "Error";
     }
     const dateArr = this.data.birthDate.split(".");
     const fixedDate = `${dateArr[1]}.${dateArr[0]}.${dateArr[2]}`;
@@ -103,6 +102,9 @@ class PersonClass {
   // }
 
   getFullAddress() {
+    if (!this.validate([this.data.address])) {
+      return "Error";
+    }
     const { country, city, street, house, apartment } = this.data.address;
     if (!this.validate([country, city, street, house])) {
       return "Error";
