@@ -1,11 +1,12 @@
 function quadraticEquation(a, b, c) {
   try {
-    const x1 = (-1 * b + Math.sqrt(Math.pow(b, 2) - 4 * a * c)) / (2 * a);
-    const x2 = (-1 * b - Math.sqrt(Math.pow(b, 2) - 4 * a * c)) / (2 * a);
-
     if (!c) throw "missing parameter";
     if (a === 0) throw "not a quadratic equation";
-    if (Math.pow(b, 2) - 4 * a * c < 0) throw "no sqrt from negative number";
+    const d = Math.pow(b, 2) - 4 * a * c;
+    if (d < 0) throw "no sqrt from negative number";
+
+    const x1 = (-1 * b + Math.sqrt(d)) / (2 * a);
+    const x2 = (-1 * b - Math.sqrt(d)) / (2 * a);
 
     return `x1=${x1}, x2=${x2}`;
   } catch (err) {
