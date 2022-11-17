@@ -166,7 +166,7 @@ img {
   object-fit: cover;
 }
 
-.letter-img {
+.letter-container {
   padding-right: 50px;
 }
 
@@ -263,6 +263,10 @@ img {
   .img-container,
   .subscribe-container {
     width: 100%;
+  }
+
+  .letter-container {
+    padding-right: 0;
   }
 
   .paris-img,

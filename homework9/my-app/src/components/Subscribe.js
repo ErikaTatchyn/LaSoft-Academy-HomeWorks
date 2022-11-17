@@ -17,7 +17,7 @@ function Subscribe() {
 
           <Button text="Subscribe" />
         </div>
-        <div className="img-container">
+        <div className="img-container letter-container">
           <img
             src="../img/old-letter1-SA.jpg"
             alt="Old letter"
