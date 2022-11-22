@@ -7,8 +7,6 @@ const options = {
   },
 };
 
-console.log(options);
-
 const searchBtn = document.getElementById("search");
 searchBtn.addEventListener("click", fetchData);
 function fetchData() {

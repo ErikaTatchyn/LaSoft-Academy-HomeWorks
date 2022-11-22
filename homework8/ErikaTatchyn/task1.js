@@ -1,6 +1,6 @@
 // Turn given object into iterable so it was possible to loop through it via for...of construction.
 // Given object:
-let range = {
+const range = {
   from: 1,
   to: 10,
 };
