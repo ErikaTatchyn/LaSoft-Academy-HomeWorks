@@ -1,16 +1,15 @@
 import React from "react";
 import Button from "./Button";
 import DescriptionText from "./DescriptionText";
-import HeroList from "./HeroList";
+import List from "./List";
+import MainTitle from "./MainTitle";
 
 function Hero() {
   return (
     <section className="hero-section">
       <div className="container">
         <div className="hero-container">
-          <h1 className="hero-header">
-            Desperate to learn drawing? We’ll teach you!
-          </h1>
+          <MainTitle text="Desperate to learn drawing? We’ll teach you!" />
           <DescriptionText
             text="Our school has more than 20 years of experience in teaching people
             who always thought that they don’t have even a slightest hint of a
@@ -18,7 +17,7 @@ function Hero() {
           />
 
           <p className="hero-list-title">With us you will get:</p>
-          <HeroList />
+          <List />
           <Button text="Apply now" />
         </div>
         <div className="img-container">

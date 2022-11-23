@@ -1,0 +1,8 @@
+.button {
+  width: 100%;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--active-color);
+}

@@ -1,0 +1,248 @@
+[
+  {
+    "id": "DlxkqAWBwjF0DF80b29E",
+    "name": "Anime Sketching",
+    "price": 400,
+    "currency": "USD",
+    "duration": "4 months",
+    "periodicity": "2 times per week",
+    "level": "Newbie",
+    "groups": [
+      {
+        "id": "as1",
+        "days": ["sat", "sun"],
+        "mode": "offline",
+        "time": "10-12pm"
+      },
+      {
+        "time": "4-6pm",
+        "days": ["tue", "thu"],
+        "mode": "online",
+        "id": "as2"
+      },
+      {
+        "id": "as3",
+        "time": "12-2pm",
+        "mode": "online",
+        "days": ["sat", "sun"]
+      }
+    ],
+    "description_short": "Basics of anime creation: tecniques, principles, hints. For those who loves anime and wants to learn creating it",
+    "description_full": [
+      "basic principles of anime-style painting",
+      "key features of anime character",
+      "visualising emotions of anime character",
+      "creating anime-style scenes: home, fantasy, nature",
+      "at the end of course you will have at least 3 finished art works and certificate"
+    ],
+    "thumbnail_img_url": "https://firebasestorage.googleapis.com/v0/b/simple-art-19399.appspot.com/o/courses%2Fan_t.png?alt=media&token=c8960199-4bcb-4652-b15f-44bfe7bcd3d8",
+    "full_img_url": "https://firebasestorage.googleapis.com/v0/b/simple-art-19399.appspot.com/o/courses%2Fan_f.png?alt=media&token=d76f0def-c194-4117-b32a-ba93a89d9dd4"
+  },
+  {
+    "id": "FZbsBkVELxOyZV7HfGJO",
+    "name": "Manga Creation A-Z",
+    "price": 600,
+    "currency": "USD",
+    "duration": "4 months",
+    "periodicity": "3 times per week",
+    "level": "Intermediate",
+    "groups": [
+      {
+        "time": "6-8pm",
+        "days": ["mon", "tue", "fri"],
+        "mode": "offline",
+        "id": "mc1"
+      },
+      {
+        "id": "mc2",
+        "days": ["wed", "thu", "sat"],
+        "time": "5-7pm",
+        "mode": "online"
+      }
+    ],
+    "description_short": "Complete course on creating manga: drawing, scripting, scenes composing, etc.",
+    "description_full": [
+      "basic principles of manga creation",
+      "brief summary on anime style and anime character features",
+      "manga script writing: from idea to detailed scenes",
+      "composing scenes into whole manga piece",
+      "at the end of course you will have complete manga book and certificate"
+    ],
+    "thumbnail_img_url": "https://firebasestorage.googleapis.com/v0/b/simple-art-19399.appspot.com/o/courses%2Fmg_t.png?alt=media&token=4a21defb-1f5b-4ea8-864a-242ea8783f12",
+    "full_img_url": "https://firebasestorage.googleapis.com/v0/b/simple-art-19399.appspot.com/o/courses%2Fmg_f.png?alt=media&token=db1c0ec9-1800-43f4-9c2d-7e62b3cdd338"
+  },
+  {
+    "id": "GGN3mxKTmw4Zk011nR6M",
+    "name": "Watercolor Pro",
+    "price": 400,
+    "currency": "USD",
+    "duration": "4 months",
+    "periodicity": "3 times per week",
+    "level": "Intermediate",
+    "groups": [
+      {
+        "time": "6-8pm",
+        "days": ["mon", "wed", "thu"],
+        "mode": "offline",
+        "id": "wcp1"
+      },
+      {
+        "id": "wcp2",
+        "days": ["fri", "sat", "sun"],
+        "time": "10am-12pm",
+        "mode": "offline"
+      },
+      {
+        "time": "4-6pm",
+        "mode": "online",
+        "id": "wcp3",
+        "days": ["mon", "wed", "fri"]
+      }
+    ],
+    "description_short": "Offers advanced watercolor tecniques and hints. For those who wants to improve basic skills",
+    "description_full": [
+      "advanced watercolor tecniques and hints",
+      "how to combine watercolor with other art tools",
+      "intro to digital watercolor style",
+      "at the end of course you will have at least 4 finished art works and certificate"
+    ],
+    "thumbnail_img_url": "https://firebasestorage.googleapis.com/v0/b/simple-art-19399.appspot.com/o/courses%2FwcP_t.png?alt=media&token=c60e8980-72fd-45aa-81bf-0b6b55e2070e",
+    "full_img_url": "https://firebasestorage.googleapis.com/v0/b/simple-art-19399.appspot.com/o/courses%2FwcP_f.png?alt=media&token=f886f202-c193-4552-be54-695633eca293"
+  },
+  {
+    "id": "MDWmGBkBEqsEGSgNMNXr",
+    "name": "Graphics Basics",
+    "price": 300,
+    "currency": "USD",
+    "duration": "3 months",
+    "periodicity": "3 times per week",
+    "level": "Newbie",
+    "groups": [
+      {
+        "time": "6-8pm",
+        "id": "gb1",
+        "mode": "offline",
+        "days": ["mon", "wed", "fri"]
+      },
+      {
+        "days": ["wed", "fri", "sat"],
+        "id": "gb2",
+        "time": "5-7pm",
+        "mode": "offline"
+      },
+      {
+        "id": "gb3",
+        "mode": "online",
+        "time": "1pm-3pm",
+        "days": ["wed", "sat", "sun"]
+      }
+    ],
+    "description_short": "Course for those who want to learn how to work with a plain pencil and create black'n'white pieces",
+    "description_full": [
+      "basic principles of color theory and composition",
+      "light and shadow demonstration in graphics",
+      "creating simple yet beautiful pictures with plain pencils",
+      "at the end of course you will have at least 4 finished art works and certificate"
+    ],
+    "thumbnail_img_url": "https://firebasestorage.googleapis.com/v0/b/simple-art-19399.appspot.com/o/courses%2Fgr_t.png?alt=media&token=77d974a0-3ec6-4d32-ae73-8b0eae7eac29",
+    "full_img_url": "https://firebasestorage.googleapis.com/v0/b/simple-art-19399.appspot.com/o/courses%2Fgr_f.png?alt=media&token=16cc881a-7d0c-4486-8614-2b3ae2f03acf"
+  },
+  {
+    "id": "bItxhT82qWlABcJN66Hh",
+    "name": "Basic Sketching",
+    "price": 300,
+    "currency": "USD",
+    "duration": "3 months",
+    "periodicity": "3 times per week",
+    "level": "Newbie",
+    "groups": [
+      {
+        "time": "7-9pm",
+        "days": ["mon", "wed", "fri"],
+        "id": "bs1",
+        "mode": "offline"
+      },
+      {
+        "id": "bs2",
+        "days": ["tue", "thu", "sat"],
+        "mode": "online",
+        "time": "5-7pm"
+      }
+    ],
+    "description_short": "Course for those who don't have any skills in drawing and wants to learn",
+    "description_full": [
+      "Basics of composition and color theory",
+      "What is sketching and its purposes",
+      "sketching as the greatest way to learn how to draw",
+      "Basic techniques and hints of sketching",
+      "At the end of course you'll have a certificate and a bunch of nice sketches"
+    ],
+    "thumbnail_img_url": "https://firebasestorage.googleapis.com/v0/b/simple-art-19399.appspot.com/o/courses%2Fc1_t.png?alt=media&token=d8cca6db-495e-4604-bb00-ab1487cb4631",
+    "full_img_url": "https://firebasestorage.googleapis.com/v0/b/simple-art-19399.appspot.com/o/courses%2Fc1_f.png?alt=media&token=9224a4b5-bd03-4757-b15d-48c9ac7287f9"
+  },
+  {
+    "id": "m1lPLAW9cypH9NU3vrSu",
+    "name": "Watercolor Basics",
+    "price": 400,
+    "currency": "USD",
+    "duration": "4 months",
+    "periodicity": "2 times per week",
+    "level": "Newbie",
+    "groups": [
+      {
+        "mode": "offline",
+        "id": "wcb1",
+        "time": "6-8pm",
+        "days": ["tue", "thu"]
+      },
+      {
+        "days": ["sat", "sun"],
+        "mode": "offline",
+        "id": "wcb2",
+        "time": "12-2pm"
+      }
+    ],
+    "description_short": "Basic watercolor tecniques, principles, hints. For those who wants to learn watercolor painting",
+    "description_full": [
+      "basics of color theory and composition",
+      "basic watercolor tecniques and hints",
+      "how to create simple and beautiful pieces in watercolor",
+      "at the end of course you will have at least 4 finished art works and certificate"
+    ],
+    "thumbnail_img_url": "https://firebasestorage.googleapis.com/v0/b/simple-art-19399.appspot.com/o/courses%2FwcB_t.png?alt=media&token=3840ffdd-ed24-48c5-b836-e5b2a83b7b84",
+    "full_img_url": "https://firebasestorage.googleapis.com/v0/b/simple-art-19399.appspot.com/o/courses%2FwcB_f.png?alt=media&token=a45a84e4-aa48-4645-b6c6-2dc3cb76fdf9"
+  },
+  {
+    "id": "sOV2BClHZnVaw2u5gEWy",
+    "name": "Digital Sketching",
+    "price": 300,
+    "currency": "USD",
+    "duration": "3 months",
+    "periodicity": "3 times per week",
+    "level": "Newbie",
+    "groups": [
+      {
+        "days": ["tue", "thu", "sat"],
+        "mode": "offline",
+        "time": "4-6pm",
+        "id": "ds1"
+      },
+      {
+        "time": "7-9pm",
+        "days": ["fri", "sat", "sun"],
+        "mode": "online",
+        "id": "ds2"
+      }
+    ],
+    "description_short": "Basic digital art tecniques, principles, hints. For those who wants to learn digital painting",
+    "description_full": [
+      "basics of color theory and composition",
+      "diversity of painting styles in digital art",
+      "basic digital drawing tecniques and hints",
+      "how to create simple and beautiful pieces with digital devices and programs",
+      "at the end of course you will have at least 3 finished art works and certificate"
+    ],
+    "thumbnail_img_url": "https://firebasestorage.googleapis.com/v0/b/simple-art-19399.appspot.com/o/courses%2Fc2_t.png?alt=media&token=43afea95-503b-493b-8bcf-058a39ff430f",
+    "full_img_url": "https://firebasestorage.googleapis.com/v0/b/simple-art-19399.appspot.com/o/courses%2Fc2_f.png?alt=media&token=0744d6cf-450a-4aee-9c1a-ec8adafa39c8"
+  }
+]

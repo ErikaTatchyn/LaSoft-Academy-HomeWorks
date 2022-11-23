@@ -1,19 +1,28 @@
 import React from "react";
-import Button from "./Button";
+import Burger from "./Burger/Burger";
+import Button from "./Button/Button";
 import Logo from "./Logo";
-import SiteNav from "./SiteNav";
+import SiteNav from "./SiteNav/SiteNav";
 
 function Header() {
+  const [open, setOpen] = React.useState(false);
+
   return (
-    <header className="header">
-      <div className="container header-container">
-        <Logo />
-        <nav className="nav-container sidebar hidden" id="sidebar">
-          <SiteNav />
-          <Button text="Apply now" />
-        </nav>
-      </div>
-    </header>
+    <React.Fragment>
+      <Burger open={open} onClick={() => setOpen(!open)} />
+      <header className="header">
+        <div className="container header-container">
+          <Logo />
+          <nav
+            className={`nav-container sidebar ${!open ? "hidden" : ""}`}
+            id="sidebar"
+          >
+            <SiteNav />
+            <Button text="Apply now" />
+          </nav>
+        </div>
+      </header>
+    </React.Fragment>
   );
 }
 

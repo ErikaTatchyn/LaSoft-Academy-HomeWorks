@@ -49,10 +49,6 @@ img {
   gap: 30px;
 }
 
-.burger {
-  display: none;
-}
-
 .sidebar {
   display: inline-block;
 }
@@ -67,12 +63,6 @@ img {
   padding-top: 25px;
   padding-bottom: 25px;
   align-items: center;
-}
-
-.site-nav {
-  display: flex;
-  align-items: center;
-  margin-right: 24px;
 }
 
 .nav-container {
@@ -274,22 +264,8 @@ img {
     padding: 0;
   }
 
-  .button {
-    width: 100%;
-  }
-
-  .button:hover,
-  .button:focus {
-    background-color: var(--active-color);
-  }
-
   .sidebar {
     flex: initial;
-  }
-
-  .site-nav {
-    flex-direction: column;
-    margin-bottom: 30px;
   }
 
   .footer-container {

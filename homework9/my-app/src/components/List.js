@@ -1,6 +1,6 @@
 import React from "react";
 
-function HeroList() {
+function List() {
   return (
     <ul className="hero-list">
       <li className="hero-list-item">
@@ -20,4 +20,4 @@ function HeroList() {
   );
 }
 
-export default HeroList;
+export default List;
