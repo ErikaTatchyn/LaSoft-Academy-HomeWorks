@@ -1,16 +1,13 @@
 import React from "react";
-<<<<<<<< HEAD:homework9/src/components/Subscribe/Subscribe.js
+
 import DescriptionText from "../DescriptionText/DescriptionText";
 import SubscribeBtn from "../SubscribeBtn/SubscribeBtn";
+import SubscribeModal from "../SubscribeModal/SubscribeModal";
 
 import "./Subscribe.css";
-========
-
-import Button from "./Button";
-import DescriptionText from "./DescriptionText";
->>>>>>>> hw9:homework9/src/components/Subscribe.js
 
 function Subscribe() {
+  const [open, setOpen] = React.useState(false);
   return (
     <section className="subscribe-section">
       <div className="container reverse-container">
@@ -22,7 +19,7 @@ function Subscribe() {
             text="Subscribe to our newsletter to stay tuned and get hottest updates
             and deals"
           />
-          <SubscribeBtn />
+          <SubscribeBtn onClick={() => setOpen(true)} />
         </div>
         <div className="img-container letter-container">
           <img
@@ -32,6 +29,7 @@ function Subscribe() {
           />
         </div>
       </div>
+      <SubscribeModal open={open} onClose={() => setOpen(false)} />
     </section>
   );
 }

@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  height: 100%;
+  height: 100vph;
 }
 
 .confirmation-title {
@@ -12,6 +12,10 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 117%;
+}
+
+.confirmation-text {
+  text-align: center;
 }
 
 .home-button {

@@ -40,11 +40,31 @@ export default function Apply() {
             <form className="form" onSubmit={handleSubmit(onSubmit)}>
               <label className="field">
                 <span className="input-desc">Course</span>
-                <Select options={options} className="select" />{" "}
+                <Select
+                  options={options}
+                  styles={{
+                    control: (baseStyles, state) => ({
+                      ...baseStyles,
+                      width: 300,
+                      borderRadius: 10,
+                      borderColor: state.isFocused ? "#1B6C71" : "#C2D2D2",
+                    }),
+                  }}
+                />{" "}
               </label>
               <label className="field">
                 <span className="input-desc">Group</span>
-                <Select options={groupOptions} className="select" />{" "}
+                <Select
+                  options={groupOptions}
+                  styles={{
+                    control: (baseStyles, state) => ({
+                      ...baseStyles,
+                      width: 300,
+                      borderRadius: 10,
+                      borderColor: state.isFocused ? "#1B6C71" : "#C2D2D2",
+                    }),
+                  }}
+                />{" "}
               </label>
               <label className="field">
                 <span className="input-desc">Full name</span>

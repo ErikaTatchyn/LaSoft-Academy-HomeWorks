@@ -13,7 +13,10 @@ export default function Confirmation() {
           <use href="./img/symbol-defs.svg#icon-done"></use>
         </svg>
         <h1 className="confirmation-title">Thank you!</h1>
-        <DescriptionText text="Check your mailbox. There should be a confirmation letter. We’ll contact you soon to give you info about next steps" />
+        <p className="description-text confirmation-text">
+          Check your mailbox. There should be a confirmation letter. We’ll
+          contact you soon to give you info about next steps
+        </p>
         <Link to="/" className="link">
           <button className="home-button" type="button">
             Back to Home

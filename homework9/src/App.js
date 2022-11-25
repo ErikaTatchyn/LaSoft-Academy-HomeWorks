@@ -47,10 +47,6 @@ const router = createBrowserRouter([
         path: "/confirmation",
         element: <Confirmation />,
       },
-      {
-        path: "/subscribe",
-        element: <SubscribeModal />,
-      },
     ],
   },
 ]);
