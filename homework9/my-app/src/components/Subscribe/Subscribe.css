@@ -1,0 +1,34 @@
+.reverse-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.subscribe-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 18px;
+}
+
+.subscribe-header {
+  font-family: "Baloo 2";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 129%;
+}
+
+@media (max-width: 425px) {
+  .img-container,
+  .subscribe-container {
+    width: 100%;
+  }
+
+  .reverse-container {
+    flex-direction: column;
+  }
+}

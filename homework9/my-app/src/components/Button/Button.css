@@ -1,8 +1,23 @@
 .button {
-  width: 100%;
+  color: var(--secondary-text-color);
+  background-color: var(--accent-color);
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  border: transparent;
+  border-radius: 10px;
+  padding: 10px 38px;
 }
 
-.button:hover,
-.button:focus {
-  background-color: var(--active-color);
+@media (max-width: 425px) {
+  .button {
+    width: 100%;
+  }
+
+  .button:hover,
+  .button:focus {
+    background-color: var(--active-color);
+  }
 }

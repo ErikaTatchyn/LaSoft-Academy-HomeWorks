@@ -1,28 +1,41 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+
 import "./SiteNav.css";
+
+let activeStyle = {
+  color: "#59abb0",
+};
 
 function SiteNav() {
   return (
     <ul className="list site-nav">
       <li>
-        <a href="" className="nav-item link">
+        <NavLink
+          to="/courses"
+          className="nav-item link"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
           Courses
-        </a>
+        </NavLink>
       </li>
       <li>
-        <a href="" className="nav-item link">
+        <NavLink
+          to="/teachers"
+          className="nav-item link"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
           Teachers
-        </a>
+        </NavLink>
       </li>
       <li>
-        <a href="" className="nav-item link">
-          Prices
-        </a>
-      </li>
-      <li>
-        <a href="" className="nav-item link">
+        <NavLink
+          to="/about"
+          className="nav-item link"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
           About us
-        </a>
+        </NavLink>
       </li>
     </ul>
   );

@@ -1,11 +1,12 @@
 import React from "react";
-// import styles from "./Burger.module.css";
-import "./Burger.module.css";
+
+import styles from "./Burger.module.css";
 
 function Burger(props) {
   return (
     <div
-      className={`burger ${props.open ? "change" : ""}`}
+      // className={`burger ${props.open ? "change" : ""}`}
+      className={styles.burger}
       id="burger"
       onClick={props.onClick}
     >

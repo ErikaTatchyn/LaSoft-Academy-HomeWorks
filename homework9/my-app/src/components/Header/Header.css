@@ -1,0 +1,30 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar {
+  display: inline-flex;
+}
+
+@media (max-width: 425px) {
+  .header-container {
+    align-items: flex-start;
+  }
+
+  .sidebar {
+    flex: initial;
+  }
+
+  .sidebar.hidden {
+    display: none;
+  }
+}

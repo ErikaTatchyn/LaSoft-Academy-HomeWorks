@@ -1,6 +1,8 @@
 .site-nav {
-  flex-direction: column;
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .nav-item {
@@ -9,7 +11,6 @@
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;
 }
 
 .nav-item:hover,
@@ -20,8 +21,9 @@
 
 @media (min-width: 425px) {
   .site-nav {
-    display: flex;
+    flex-direction: row;
     align-items: center;
     margin-right: 24px;
+    margin-bottom: 0;
   }
 }

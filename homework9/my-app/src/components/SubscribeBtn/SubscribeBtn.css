@@ -1,0 +1,15 @@
+.subscribe-button {
+  font-family: "Baloo 2";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #1b6c71;
+  background: #ffffff;
+  border: 1px solid #1b6c71;
+  border-radius: 10px;
+  padding: 9px 45px;
+}
