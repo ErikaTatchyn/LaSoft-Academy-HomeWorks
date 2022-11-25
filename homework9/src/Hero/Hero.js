@@ -1,11 +1,17 @@
 import React from "react";
 
+<<<<<<<< HEAD:homework9/src/Hero/Hero.js
 import Button from "../components/Button/Button";
 import DescriptionText from "../components/DescriptionText/DescriptionText";
 import List from "../components/List/List";
 import MainTitle from "../components/MainTitle";
 
 import "./Hero.css";
+========
+import Button from "./Button";
+import DescriptionText from "./DescriptionText";
+import HeroList from "./HeroList";
+>>>>>>>> hw9:homework9/src/components/Hero.js
 
 function Hero() {
   return (

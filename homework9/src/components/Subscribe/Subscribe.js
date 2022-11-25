@@ -1,8 +1,14 @@
 import React from "react";
+<<<<<<<< HEAD:homework9/src/components/Subscribe/Subscribe.js
 import DescriptionText from "../DescriptionText/DescriptionText";
 import SubscribeBtn from "../SubscribeBtn/SubscribeBtn";
 
 import "./Subscribe.css";
+========
+
+import Button from "./Button";
+import DescriptionText from "./DescriptionText";
+>>>>>>>> hw9:homework9/src/components/Subscribe.js
 
 function Subscribe() {
   return (
