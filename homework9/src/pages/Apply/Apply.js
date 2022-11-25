@@ -68,12 +68,21 @@ export default function Apply() {
               </label>
               <label className="field">
                 <span className="input-desc">Full name</span>
+
                 <input
                   type="text"
                   className="input"
                   placeholder=""
-                  {...register("user_name", { required: true, minLength: 2 })}
+                  {...register("user_name", {
+                    required: true,
+                    minLength: 4,
+                    pattern: /^[A-Za-z]+$/i,
+                  })}
+                  aria-invalid={errors.user_name ? "true" : "false"}
                 />
+                {errors.firstName?.type === "required" && (
+                  <p role="alert">First name is required</p>
+                )}
               </label>
               <label className="field">
                 <span className="input-desc">E-mail</span>

@@ -1,9 +1,9 @@
 import React from "react";
 
-import Button from "../components/Button/Button";
-import DescriptionText from "../components/DescriptionText/DescriptionText";
-import List from "../components/List/List";
-import MainTitle from "../components/MainTitle";
+import Button from "../Button/Button";
+import DescriptionText from "../DescriptionText/DescriptionText";
+import List from "../List/List";
+import MainTitle from "../MainTitle";
 
 import "./Hero.css";
 
