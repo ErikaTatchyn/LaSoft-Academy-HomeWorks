@@ -1,28 +1,14 @@
 import React from "react";
 
+import NavItem from "./NavItem";
+
 function SiteNav() {
   return (
     <ul className="list site-nav">
-      <li>
-        <a href="" className="nav-item link">
-          Courses
-        </a>
-      </li>
-      <li>
-        <a href="" className="nav-item link">
-          Teachers
-        </a>
-      </li>
-      <li>
-        <a href="" className="nav-item link">
-          Prices
-        </a>
-      </li>
-      <li>
-        <a href="" className="nav-item link">
-          About us
-        </a>
-      </li>
+      <NavItem text="Courses" />
+      <NavItem text="Teachers" />
+      <NavItem text="Prices" />
+      <NavItem text="About us" />
     </ul>
   );
 }
