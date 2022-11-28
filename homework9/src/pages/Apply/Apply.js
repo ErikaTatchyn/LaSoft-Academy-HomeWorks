@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import axios from "axios";
 import Select from "react-select";
-import { useForm } from "react-hook-form";
+
+import { useForm, Controller } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 import MainTitle from "../../components/MainTitle";
+import Error from "../../components/Error/Error";
 import DescriptionText from "../../components/DescriptionText/DescriptionText";
 
 import "./Apply.css";
-import HeaderBack from "../../components/HeaderBack/HeaderBack";
-import { Link } from "react-router-dom";
 
 const options = [
   { value: "Basic Sketching", label: "Basic Sketching" },
@@ -21,17 +22,31 @@ const groupOptions = [
   { value: "mon/wed/fri 5pm-9pm", label: "mon/wed/fri 5pm-9pm" },
 ];
 
-export default function Apply() {
+export default function Apply({ courses }) {
   const {
     register,
     handleSubmit,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => console.log(data);
+    control,
+    formState: { errors, isDirty, isValid },
+  } = useForm({ mode: "onChange" });
+
+  const navigate = useNavigate();
+
+  const onSubmit = (data) => {
+    axios
+      .post("http://localhost:5000/form/apply", data)
+
+      .then(function (response) {
+        console.log(response);
+        navigate("/confirmation");
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
 
   return (
     <>
-      {/* <HeaderBack /> */}
       <main>
         <div className="container apply-container">
           <div className="apply-info-container">
@@ -40,73 +55,114 @@ export default function Apply() {
             <form className="form" onSubmit={handleSubmit(onSubmit)}>
               <label className="field">
                 <span className="input-desc">Course</span>
-                <Select
-                  options={options}
-                  styles={{
-                    control: (baseStyles, state) => ({
-                      ...baseStyles,
-                      width: 300,
-                      borderRadius: 10,
-                      borderColor: state.isFocused ? "#1B6C71" : "#C2D2D2",
-                    }),
-                  }}
-                />{" "}
+                <div className="input-container">
+                  <Controller
+                    {...register("course", {
+                      required: true,
+                    })}
+                    control={control}
+                    render={({ field }) => (
+                      <Select
+                        {...field}
+                        options={options}
+                        styles={{
+                          control: (baseStyles, state) => ({
+                            ...baseStyles,
+                            width: 300,
+                            fontSize: 14,
+                            borderRadius: 10,
+                            boxShadow: "none",
+                            borderColor: state.isFocused
+                              ? "#1B6C71"
+                              : "#C2D2D2",
+                          }),
+                        }}
+                      />
+                    )}
+                  />
+                  {errors.course && <Error />}{" "}
+                </div>
               </label>
               <label className="field">
                 <span className="input-desc">Group</span>
-                <Select
-                  options={groupOptions}
-                  styles={{
-                    control: (baseStyles, state) => ({
-                      ...baseStyles,
-                      width: 300,
-                      borderRadius: 10,
-                      borderColor: state.isFocused ? "#1B6C71" : "#C2D2D2",
-                    }),
-                  }}
-                />{" "}
+                <div className="input-container">
+                  <Controller
+                    control={control}
+                    {...register("group", { required: true })}
+                    render={({ field }) => (
+                      <Select
+                        {...field}
+                        options={groupOptions}
+                        styles={{
+                          control: (baseStyles, state) => ({
+                            ...baseStyles,
+                            width: 300,
+                            borderRadius: 10,
+                            fontSize: 14,
+                            boxShadow: "none",
+                            borderColor: state.isFocused
+                              ? "#1B6C71"
+                              : "#C2D2D2",
+                          }),
+                        }}
+                      />
+                    )}
+                  />
+                  {errors.group && <Error />}
+                </div>
               </label>
               <label className="field">
                 <span className="input-desc">Full name</span>
-
-                <input
-                  type="text"
-                  className="input"
-                  placeholder=""
-                  {...register("user_name", {
-                    required: true,
-                    minLength: 4,
-                    pattern: /^[A-Za-z]+$/i,
-                  })}
-                  aria-invalid={errors.user_name ? "true" : "false"}
-                />
-                {errors.firstName?.type === "required" && (
-                  <p role="alert">First name is required</p>
-                )}
+                <div className="input-container">
+                  <input
+                    type="text"
+                    className="input"
+                    placeholder=""
+                    {...register("user_name", {
+                      required: true,
+                      minLength: 4,
+                      pattern: /^[A-Za-z]+$/i,
+                    })}
+                    aria-invalid={errors.user_name ? "true" : "false"}
+                  />
+                  {errors.user_name && <Error />}
+                </div>
               </label>
               <label className="field">
                 <span className="input-desc">E-mail</span>
-                <input
-                  type="email"
-                  className="input"
-                  placeholder="email@email.com"
-                  {...register("user_email", { required: true })}
-                />
+                <div className="input-container">
+                  <input
+                    type="email"
+                    className="input"
+                    placeholder="email@email.com"
+                    {...register("user_email", { required: true })}
+                  />
+                  {errors.user_email && <Error />}
+                </div>
               </label>
               <label className="field">
                 <span className="input-desc">Phone number</span>
-                <input
-                  type="tel"
-                  className="input"
-                  placeholder="(___)___-__-__"
-                  {...register("user_phone", { required: true })}
-                />
+                <div className="input-container">
+                  <input
+                    type="tel"
+                    className="input"
+                    placeholder="(___)___-__-__"
+                    {...register("user_phone", {
+                      pattern: /^[0-9]+$/i,
+                      required: true,
+                      minLength: 9,
+                    })}
+                  />
+                  {errors.user_phone && <Error />}
+                </div>
               </label>
-              <Link to="/confirmation" className="link">
-                <button className="form-button disabled" type="submit">
-                  Apply
-                </button>
-              </Link>
+
+              <input
+                type="submit"
+                className="form-button"
+                value="Apply"
+                disabled={isDirty && !isValid}
+              />
             </form>
           </div>
           <img src="./img/apply.jpg" alt="course" className="apply-img" />

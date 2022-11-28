@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Logo from "../Logo/Logo";
+import Logo from "../../Logo/Logo";
 
 import "./HeaderBack.css";
 
-function Header() {
+function HeaderBack() {
   const [open, setOpen] = React.useState(false);
 
   return (
@@ -25,4 +25,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default HeaderBack;

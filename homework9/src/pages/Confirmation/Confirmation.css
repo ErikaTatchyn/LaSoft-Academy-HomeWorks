@@ -1,9 +1,15 @@
+.confirmation-main {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .confirmation-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  height: 100vph;
 }
 
 .confirmation-title {

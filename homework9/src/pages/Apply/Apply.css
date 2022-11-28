@@ -34,10 +34,11 @@
   line-height: 143%;
   color: #93a3a3;
 }
-/* 
+
 .input:focus {
   border: 1px solid #1b6c71;
-} */
+  outline: none;
+}
 
 .form-button {
   width: 150px;

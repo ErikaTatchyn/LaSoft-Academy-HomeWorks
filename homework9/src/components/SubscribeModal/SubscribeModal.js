@@ -1,15 +1,27 @@
+import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 import "./SubscribeModal.css";
 
 function SubscribeModal({ open, onClose }) {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const { register, handleSubmit } = useForm();
+
+  const navigate = useNavigate();
+
+  const onSubmit = (data) => {
+    axios
+      .post("http://localhost:5000/form/subscribe", data)
+
+      .then(function (response) {
+        console.log(response);
+        navigate("/confirmation");
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
 
   return (
     <div data-modal className={`backdrop ${!open ? "is-hidden" : ""}`}>

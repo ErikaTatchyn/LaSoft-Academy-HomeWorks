@@ -1,15 +1,30 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import Button from "../../components/Button/Button";
 import List from "../../components/List/List";
 import MainTitle from "../../components/MainTitle";
 
-import courses from "../../mock/courses.json";
+// import courses from "../../mock/courses.json";
 
 import "./CourseDetails.css";
 
 export default function Course() {
+  const [courses, setCourses] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/courses")
+      .then(function (response) {
+        // handle success
+        setCourses(response.data);
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      });
+  }, []);
   const { id } = useParams();
   const course = courses.find((course) => course.id === id) || {};
   return (
