@@ -1,25 +1,20 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 import CourseCard from "../../components/CourseCard/CourseCard";
 import MainTitle from "../../components/MainTitle";
 
+import { setCoursesData, fetchCourses } from "../../state/coursesSlice";
+
 import "./Courses.css";
 
 export default function Courses() {
-  const [courses, setCourses] = useState([]);
+  // const [courses, setCourses] = useState([]);
+  const dispatch = useDispatch();
+  const courses = useSelector((state) => state.courses.data);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/courses")
-      .then(function (response) {
-        // handle success
-        setCourses(response.data);
-      })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      });
+    dispatch(fetchCourses());
   }, []);
 
   return (
