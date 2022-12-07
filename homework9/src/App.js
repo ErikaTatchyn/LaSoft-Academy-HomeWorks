@@ -10,8 +10,7 @@ import Root from "./Root";
 import Apply from "./pages/Apply/Apply";
 
 import "./App.css";
-import Confirmation from "./pages/Confirmation/Confirmation";
-import SubscribeModal from "./components/SubscribeModal/SubscribeModal";
+import Confirmation from "./pages/Apply/Confirmation/Confirmation";
 
 const router = createBrowserRouter([
   {

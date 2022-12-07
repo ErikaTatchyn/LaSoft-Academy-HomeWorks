@@ -1,12 +1,12 @@
+import clsx from "clsx";
 import React from "react";
 
-import styles from "./Burger.module.css";
+import "./Burger.module.css";
 
 function Burger(props) {
   return (
     <div
-      // className={`burger ${props.open ? "change" : ""}`}
-      className={styles.burger}
+      className={clsx("burger", !props.open && "change")}
       id="burger"
       onClick={props.onClick}
     >

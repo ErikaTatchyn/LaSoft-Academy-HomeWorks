@@ -1,30 +1,22 @@
-import axios from "axios";
+import clsx from "clsx";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+
+import api from "../../api";
 
 import "./SubscribeModal.css";
 
 function SubscribeModal({ open, onClose }) {
   const { register, handleSubmit } = useForm();
 
-  const navigate = useNavigate();
-
   const onSubmit = (data) => {
-    axios
-      .post("http://localhost:5000/form/subscribe", data)
-
-      .then(function (response) {
-        console.log(response);
-        navigate("/confirmation");
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    api.catch(function (error) {
+      console.log(error);
+    });
   };
 
   return (
-    <div data-modal className={`backdrop ${!open ? "is-hidden" : ""}`}>
+    <div data-modal className={clsx("backdrop", !open && "is-hidden")}>
       <div className="modal">
         <div className="modal-container">
           <svg className="modal-close-btn" onClick={onClose}>

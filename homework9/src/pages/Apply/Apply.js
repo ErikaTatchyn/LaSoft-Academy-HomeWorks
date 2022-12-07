@@ -1,4 +1,3 @@
-import axios from "axios";
 import Select from "react-select";
 
 import { useForm, Controller } from "react-hook-form";
@@ -7,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import MainTitle from "../../components/MainTitle";
 import Error from "../../components/Error/Error";
 import DescriptionText from "../../components/DescriptionText/DescriptionText";
+import api from "../../api";
 
 import "./Apply.css";
 
@@ -22,7 +22,7 @@ const groupOptions = [
   { value: "mon/wed/fri 5pm-9pm", label: "mon/wed/fri 5pm-9pm" },
 ];
 
-export default function Apply({ courses }) {
+export default function Apply() {
   const {
     register,
     handleSubmit,
@@ -32,17 +32,14 @@ export default function Apply({ courses }) {
 
   const navigate = useNavigate();
 
-  const onSubmit = (data) => {
-    axios
-      .post("http://localhost:5000/form/apply", data)
+  const onSubmit = async (data) => {
+    try {
+      await api.post("/form/apply", data);
 
-      .then(function (response) {
-        console.log(response);
-        navigate("/confirmation");
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+      navigate("/confirmation");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -118,14 +115,14 @@ export default function Apply({ courses }) {
                     type="text"
                     className="input"
                     placeholder=""
-                    {...register("user_name", {
+                    {...register("userName", {
                       required: true,
                       minLength: 4,
                       pattern: /^[A-Za-z]+$/i,
                     })}
-                    aria-invalid={errors.user_name ? "true" : "false"}
+                    aria-invalid={errors.userName ? "true" : "false"}
                   />
-                  {errors.user_name && <Error />}
+                  {errors.userName && <Error />}
                 </div>
               </label>
               <label className="field">
@@ -135,9 +132,9 @@ export default function Apply({ courses }) {
                     type="email"
                     className="input"
                     placeholder="email@email.com"
-                    {...register("user_email", { required: true })}
+                    {...register("userEmail", { required: true })}
                   />
-                  {errors.user_email && <Error />}
+                  {errors.userEmail && <Error />}
                 </div>
               </label>
               <label className="field">
@@ -147,13 +144,13 @@ export default function Apply({ courses }) {
                     type="tel"
                     className="input"
                     placeholder="(___)___-__-__"
-                    {...register("user_phone", {
+                    {...register("userPhone", {
                       pattern: /^[0-9]+$/i,
                       required: true,
                       minLength: 9,
                     })}
                   />
-                  {errors.user_phone && <Error />}
+                  {errors.userPhone && <Error />}
                 </div>
               </label>
 

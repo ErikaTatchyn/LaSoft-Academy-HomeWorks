@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import MainTitle from "../../components/MainTitle";
@@ -10,12 +10,11 @@ import "./Teachers.css";
 
 export default function Teachers() {
   const dispatch = useDispatch();
-  const teachers = useSelector((state) => state.teachers.data);
-  const status = useSelector((state) => state.teachers.status);
+  const { data: teachers, status } = useSelector((state) => state.teachers);
 
   useEffect(() => {
     dispatch(fetchTeachers());
-  }, []);
+  }, [dispatch]);
   return (
     <main className="container">
       <MainTitle text="Meet our great team!" />

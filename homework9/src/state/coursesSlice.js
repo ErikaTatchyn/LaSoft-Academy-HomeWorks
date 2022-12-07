@@ -1,12 +1,15 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+import { morphism } from "morphism";
+
+import api from "../api";
+import { coursesSchema } from "./schema";
 
 export const fetchCourses = createAsyncThunk(
   "courses/fetchCourse",
   async () => {
-    const response = await axios.get("http://localhost:5000/courses");
-
-    return response.data;
+    const response = await api.get("/courses");
+    const morphedData = morphism(coursesSchema, response);
+    return morphedData;
   }
 );
 

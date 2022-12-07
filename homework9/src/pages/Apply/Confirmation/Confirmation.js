@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import DescriptionText from "../../components/DescriptionText/DescriptionText";
-
 import "./Confirmation.css";
 
 export default function Confirmation() {

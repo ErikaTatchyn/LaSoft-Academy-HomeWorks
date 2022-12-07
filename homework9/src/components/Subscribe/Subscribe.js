@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import DescriptionText from "../DescriptionText/DescriptionText";
 import SubscribeBtn from "../SubscribeBtn/SubscribeBtn";
@@ -7,7 +7,7 @@ import SubscribeModal from "../SubscribeModal/SubscribeModal";
 import "./Subscribe.css";
 
 function Subscribe() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   return (
     <section className="subscribe-section">
       <div className="container reverse-container">

@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import "./Button.css";
 
 function Button(props) {
+  const { path = "/apply" } = props;
   return (
-    <Link to="/apply" className="link">
+    <Link to={path} className="link">
       <button className="button" type="button">
         {props.text}
       </button>

@@ -1,18 +1,18 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
+import clsx from "clsx";
 
 import Burger from "../Burger/Burger";
 import Button from "../Button/Button";
 import Logo from "../Logo/Logo";
 import SiteNav from "../SiteNav/SiteNav";
+import HeaderBack from "./HeaderBack/HeaderBack";
 
 import "./Header.css";
-import HeaderBack from "./HeaderBack/HeaderBack";
 
 function Header() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
-  console.log("location", location);
 
   if (location.pathname === "/apply") {
     return <HeaderBack />;
@@ -25,7 +25,7 @@ function Header() {
         <div className="container header-container">
           <Logo />
           <nav
-            className={`nav-container sidebar ${!open ? "hidden" : ""}`}
+            className={clsx("nav-container", "sidebar", open && "hidden")}
             id="sidebar"
           >
             <SiteNav />

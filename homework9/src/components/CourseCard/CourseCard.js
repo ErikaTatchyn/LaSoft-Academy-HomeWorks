@@ -6,26 +6,27 @@ import Button from "../Button/Button";
 import "./CourseCard.css";
 
 export default function CourseCard({ course }) {
+  const { name, level, currency, duration, descriptionShort } = course;
   return (
     <li className="course">
       <Link to={`/courses/${course.id}`} className="course-link">
-        <img src={course.thumbnail_img_url} alt="" className="course-picture" />
+        <img src={course.thumbnailImgUrl} alt="" className="course-picture" />
         <div className="course-container">
           <div className="course-heading">
-            <span className="course-title">{course.name}</span>
+            <span className="course-title">{name}</span>
             <span className="course-price">
-              {course.price} {course.currency}
+              {course.price} {currency}
             </span>
           </div>
           <div className="courses-details">
-            <span className="courses-datail-title">Level:</span>
-            <span className="courses-datail">{course.level}</span>
+            <span className="courses-detail-title">Level:</span>
+            <span className="courses-detail">{level}</span>
           </div>
           <div className="courses-details">
-            <span className="courses-datail-title">Duration</span>
-            <span className="courses-datail">{course.duration}</span>
+            <span className="courses-detail-title">Duration</span>
+            <span className="courses-detail">{duration}</span>
           </div>
-          <p className="course-description">{course.description_short}</p>
+          <p className="course-description">{descriptionShort}</p>
           <Button text="Apply" />
         </div>
       </Link>

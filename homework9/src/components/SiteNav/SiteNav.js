@@ -3,40 +3,39 @@ import { NavLink } from "react-router-dom";
 
 import "./SiteNav.css";
 
-let activeStyle = {
+const activeStyle = {
   color: "#59abb0",
 };
+
+const links = [
+  {
+    path: "/courses",
+    title: "Courses",
+  },
+  {
+    path: "/teachers",
+    title: "Teachers",
+  },
+  {
+    path: "/about",
+    title: "About us",
+  },
+];
 
 function SiteNav() {
   return (
     <ul className="list site-nav">
-      <li>
-        <NavLink
-          to="/courses"
-          className="nav-item link"
-          style={({ isActive }) => (isActive ? activeStyle : undefined)}
-        >
-          Courses
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/teachers"
-          className="nav-item link"
-          style={({ isActive }) => (isActive ? activeStyle : undefined)}
-        >
-          Teachers
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/about"
-          className="nav-item link"
-          style={({ isActive }) => (isActive ? activeStyle : undefined)}
-        >
-          About us
-        </NavLink>
-      </li>
+      {links.map((link) => (
+        <li key={link.path}>
+          <NavLink
+            to={link.path}
+            className="nav-item link"
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            {link.title}
+          </NavLink>
+        </li>
+      ))}
     </ul>
   );
 }
