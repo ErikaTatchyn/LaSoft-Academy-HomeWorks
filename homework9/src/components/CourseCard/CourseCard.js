@@ -6,16 +6,25 @@ import Button from "../Button/Button";
 import "./CourseCard.css";
 
 export default function CourseCard({ course }) {
-  const { name, level, currency, duration, descriptionShort } = course;
+  const {
+    name,
+    level,
+    currency,
+    id,
+    price,
+    duration,
+    descriptionShort,
+    thumbnailImgUrl,
+  } = course;
   return (
     <li className="course">
-      <Link to={`/courses/${course.id}`} className="course-link">
-        <img src={course.thumbnailImgUrl} alt="" className="course-picture" />
+      <Link to={`/courses/${id}`} className="course-link">
+        <img src={thumbnailImgUrl} alt="" className="course-picture" />
         <div className="course-container">
           <div className="course-heading">
             <span className="course-title">{name}</span>
             <span className="course-price">
-              {course.price} {currency}
+              {price} {currency}
             </span>
           </div>
           <div className="courses-details">
