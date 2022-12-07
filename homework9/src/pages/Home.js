@@ -1,11 +1,11 @@
 import React from "react";
 
-import Hero from "../components/Hero";
-import Subscribe from "../components/Subscribe";
+import Hero from "../components/Hero/Hero";
+import Subscribe from "../components/Subscribe/Subscribe";
 
 function Home() {
   return (
-    <main>
+    <main className="container">
       <Hero />
       <Subscribe />
     </main>

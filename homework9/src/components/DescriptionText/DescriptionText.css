@@ -1,0 +1,12 @@
+.description-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+}
+
+@media (max-width: 425px) {
+  .description-text {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}

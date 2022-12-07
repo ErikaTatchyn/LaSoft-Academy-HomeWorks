@@ -1,0 +1,7 @@
+.hero-list {
+  margin-left: 14px;
+}
+
+.hero-list-item::marker {
+  font-size: 10px;
+}

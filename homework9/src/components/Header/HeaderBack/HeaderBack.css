@@ -1,0 +1,23 @@
+.header-back-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.back-container {
+  display: flex;
+  align-items: center;
+}
+
+.back-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  color: #0c1212;
+}
+
+.back-svg {
+  width: 10.5px;
+  height: 10.5px;
+  margin-right: 16px;
+}

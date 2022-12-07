@@ -1,0 +1,8 @@
+.hero-header {
+  font-family: "Baloo 2", sans-serif;
+  color: var(--primary-text-color);
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 57px;
+  margin: 0 auto 20px 0;
+}

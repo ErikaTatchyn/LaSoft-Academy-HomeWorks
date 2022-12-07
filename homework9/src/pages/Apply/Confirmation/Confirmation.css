@@ -1,0 +1,40 @@
+.confirmation-main {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirmation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.confirmation-title {
+  font-family: "Baloo 2";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 117%;
+}
+
+.confirmation-text {
+  text-align: center;
+}
+
+.home-button {
+  background: #ffffff;
+  border: 1px solid #1b6c71;
+  border-radius: 10px;
+  font-family: "Baloo 2";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  padding: 9px 32px;
+  color: #1b6c71;
+  margin-top: 32px;
+}

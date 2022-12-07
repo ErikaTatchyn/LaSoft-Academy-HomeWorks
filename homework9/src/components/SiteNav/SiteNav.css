@@ -1,0 +1,29 @@
+.site-nav {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.nav-item {
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.nav-item:hover,
+.nav-item:focus,
+.current {
+  font-weight: 600;
+}
+
+@media (min-width: 425px) {
+  .site-nav {
+    flex-direction: row;
+    align-items: center;
+    margin-right: 24px;
+    margin-bottom: 0;
+  }
+}

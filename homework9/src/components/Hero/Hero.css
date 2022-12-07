@@ -1,0 +1,35 @@
+.hero-section {
+  display: flex;
+  margin: 0 auto;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+}
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 30px;
+  width: 50%;
+}
+
+.paris-img {
+  padding-left: 50px;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 425px) {
+  .hero-container,
+  .img-container {
+    width: 100%;
+  }
+
+  .paris-img {
+    padding: 0;
+  }
+}
